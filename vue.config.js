@@ -1,4 +1,4 @@
-const publicPath = process.env.NODE_ENV === 'production' ? '/prtfolio/' : '/'
+const publicPath = process.env.NODE_ENV === 'production' ? '/portfolio/' : '/'
 
 module.exports = {
   // options...
