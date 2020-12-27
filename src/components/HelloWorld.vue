@@ -1,6 +1,13 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+
+
+    <p>
+      <a href="https://github.com/scenaristeur/portfolio/blob/main/README.md" target="_blank"> Source code, tuto, issues for Portfolio app</a>
+    </p>
+
+
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
