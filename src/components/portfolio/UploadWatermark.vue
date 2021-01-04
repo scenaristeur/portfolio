@@ -11,7 +11,6 @@
 
     <div ref="preview"></div>
     <b-button @click="send">Envoyer</b-button>
-
   </div>
 </template>
 
@@ -52,17 +51,16 @@ export default {
         let storage = await ldflex.data.user.storage
         let path = `${storage}`+'public/portfolio/'
         console.log(path)
-        try{
-          await images.forEach(async function(i)  {
-            let uri = path+i.name
-            console.log(encodeURI(uri))
-            var file = dataURLtoFile(i.src,i.name);
-            await fc.createFile(encodeURI(uri), file, i.type)
-          })
-          alert(images.length+" fichiers sauvegardés")
-        }catch(e){
-          alert(e)
-        }
+        await images.forEach(async function(i)  {
+          console.log(i)
+          //  let uri = f.webkitRelativePath.length > 0 ? path+f.webkitRelativePath : path+f.name
+          let uri = path+i.name
+          console.log(encodeURI(uri))
+          //Usage example:
+          var file = dataURLtoFile(i.src,i.name);
+          console.log(file);
+          await fc.createFile(encodeURI(uri), file, i.type)
+        })
       },
       dataURLtoFile(dataurl, filename) {
         var arr = dataurl.split(','),
@@ -74,6 +72,18 @@ export default {
           u8arr[n] = bstr.charCodeAt(n);
         }
         return new File([u8arr], filename, {type:mime});
+      },
+      async onInput1(files) {
+        console.log(files)
+        let storage = await ldflex.data.user.storage
+        let path = `${storage}`+'public/portfolio/'
+        console.log(path)
+        await files.forEach(async function(f)  {
+          console.log(f)
+          let uri = f.webkitRelativePath.length > 0 ? path+f.webkitRelativePath : path+f.name
+          console.log(encodeURI(uri))
+          await fc.createFile(encodeURI(uri), f, f.type)
+        })
       }
     }
   }

@@ -3,7 +3,7 @@
     <img alt="Vue logo" src="../assets/logo.png">
     <SolidLoginButton />
     <Upload />
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="Welcome to Portfolio WebApp based on Solid Specifications"/>
   </div>
 </template>
 
