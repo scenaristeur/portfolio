@@ -1,7 +1,7 @@
 # Porfolio WebApp
 - all data are stored on solid user's POD : https://github.com/solid/solid-spec/
 - Portfolio webapp hosted on github gh-pages : https://scenaristeur.github.io/portfolio/
-- source code :
+- source code : https://github.com/scenaristeur/portfolio
 - Tuto EN : https://spoggy-test6.solidcommunity.net/public/blog/portfolio.html
 - Tuto FR : La première partie de la création de l'application basée sur Solid à base de vue.js https://dfaveris.medium.com/portfolio-comment-cr%C3%A9er-une-application-web-portfolio-bas%C3%A9e-sur-solid-avec-vue-js-c57b50502d21
 - Tuto FR : Publier une webapp sur les gh-pages github https://dfaveris.medium.com/publier-une-application-vuejs-sur-github-ee7662c94667
